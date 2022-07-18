@@ -1,0 +1,11 @@
+{
+  "name": "ocp3",
+  "version": "1.0.0",
+  "description": "Projet OCR ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./styles.scss:./index.css"
+  },
+  "author": "Alexandre Léoty",
+  "license": "ISC"
+}
