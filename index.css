@@ -25,10 +25,10 @@ main h2 {
 
 .card__image {
   height: 20vh;
-  overflow: hidden;
 }
 
 .card__image img {
+  height: 100%;
   width: 100%;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
@@ -39,6 +39,14 @@ main h2 {
   justify-content: space-between;
   align-items: center;
   padding: 5px;
+}
+
+p strong {
+  font-size: large;
+}
+
+.fa-regular {
+  font-size: x-large;
 }
 
 footer {
