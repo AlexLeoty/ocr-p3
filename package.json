@@ -4,7 +4,7 @@
   "description": "Projet OCR ohmyfood",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./styles.scss:./index.css"
+    "sass": "sass --watch ./CSS/styles.scss:./CSS/index.css"
   },
   "author": "Alexandre Léoty",
   "license": "ISC"
