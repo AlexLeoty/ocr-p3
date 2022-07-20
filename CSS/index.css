@@ -6,9 +6,6 @@ body {
 }
 
 /* logo */
-header {
-  position: relative;
-}
 header img {
   width: 40%;
   display: block;
@@ -136,13 +133,46 @@ footer h4 {
   margin-inline-start: 10px;
   margin-bottom: 10px;
   padding-top: 20px;
+  margin-top: 0;
 }
 
 /* Page resto */
 /* logo retour index */
+.pic-resto {
+  width: 100%;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 500;
+  font-size: 1.7rem;
+  margin-left: 15px;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-section i {
+  margin-right: 40px;
+}
+
+section {
+  background-color: #f2f2f2;
+  border-radius: 50px 50px 0 0;
+  position: relative;
+  top: -46px;
+  margin-bottom: -46px;
+}
+
 .list {
   display: flex;
   flex-direction: column;
+}
+.list h3 {
+  margin-left: 15px;
 }
 
 .list-menu {
@@ -150,12 +180,15 @@ footer h4 {
   justify-content: space-between;
   align-items: flex-end;
 }
+.list-menu p {
+  margin: 0;
+}
 
 .btn3 {
-  background-color: #f2f2f2;
+  background-color: white;
   margin: 15px;
   border-radius: 15px;
-  padding: 20px 30px 20px 30px;
+  padding: 20px;
   color: black;
   border: none;
   cursor: pointer;

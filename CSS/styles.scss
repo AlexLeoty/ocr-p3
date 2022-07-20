@@ -1,174 +1,200 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 
 $color-primary: #9356dc;
-$color-secundary:#ff79da;
+$color-secundary: #ff79da;
 $color-tertiary: #99e2d0;
 
 body {
-        box-sizing: border-box;
-        font-family: 'Roboto', sans-serif;
-        margin: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
 }
 
-        /* logo */
-header {
-        position: relative;
-        & img {
-                width: 40%;
-                display: block;
-                margin: 20px auto 10px auto;
-        }
-}
- 
-        /* Paris Bellevile */
+/* logo */
+
+  header img {
+    width: 40%;
+    display: block;
+    margin: 20px auto 10px auto;
+  }
+
+/* Paris Bellevile */
 .loc {
-        display: flex;
-        align-items: baseline;
-        justify-content: center;
-        background-color: #e1dfdf;
-        font-weight: 500;
-        & p{
-                margin-left: 2vh;
-        }
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  background-color: #e1dfdf;
+  font-weight: 500;
+  & p {
+    margin-left: 2vh;
+  }
 }
 
-        /* Titres et bouton recherche */
+/* Titres et bouton recherche */
 .titres {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        background-color: #f2f2f2;
-        padding: 30px;
-        & h1 {
-                font-size: 1.2em;
-                margin: 0;
-        }
-        & h2 {
-                font-weight: normal;
-                font-size: 0.8em;
-        }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 30px;
+  & h1 {
+    font-size: 1.2em;
+    margin: 0;
+  }
+  & h2 {
+    font-weight: normal;
+    font-size: 0.8em;
+  }
 }
 
-.btn { 
-        background-color: $color-secundary;
-        border-radius: 30px;
-        padding: 10px 20px 10px 20px;
-        color: white;
-        border: none;
+.btn {
+  background-color: $color-secundary;
+  border-radius: 30px;
+  padding: 10px 20px 10px 20px;
+  color: white;
+  border: none;
 }
 
 /* Fonctionnement */
 .mes__boutons {
-        display: flex;
-        flex-direction: column;
-        
-        
+  display: flex;
+  flex-direction: column;
 }
-.btn2 { 
-        margin: 15px;
-        border-radius: 30px;
-        padding: 20px 30px 20px 30px;
-        color: black;
-        border: none;
-        cursor: pointer;
+.btn2 {
+  margin: 15px;
+  border-radius: 30px;
+  padding: 20px 30px 20px 30px;
+  color: black;
+  border: none;
+  cursor: pointer;
 }
 
 /* Main restos */
 main {
-        margin-top: 30px;
-        background-color: #f2f2f2;
-        display: flex;
-        flex-direction: column;
-        & h2 {
-                margin-left: 10px;
-        }
-        
-        
+  margin-top: 30px;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  & h2 {
+    margin-left: 10px;
+  }
 }
 
 .card {
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0px 5px 10px black;
-        margin: 10px;
-       
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px black;
+  margin: 10px;
 }
 .card__image {
-        height: 15vh;
-        & >img{
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-                border-radius: 10px 10px 0 0;   
-            }
-              
+  height: 15vh;
+  & > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
 }
-  
-    .card__contenu {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-        height: 6vh;
-    }
+
+.card__contenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 6vh;
+}
 
 p strong {
-        font-size: large;
+  font-size: large;
 }
 .fa-regular {
-        font-size: x-large;
+  font-size: x-large;
 }
 
-        /* footer */
+/* footer */
 
 footer {
-        margin-top: 30px;
-        padding-bottom: 20px;
-        background-color: black;
-        color: white;
-        & ul {
-                padding-inline-start: 10px;
-                margin-top: 8px;
-        }
-        & li {
-                list-style-type: none;
-        }
-        & i {
-                width: 14px;
-                margin-right: 15px;
-        }
-        & h4 {
-                font-family: 'Shrikhand', sans-serif;
-                font-weight: 500;
-                margin-inline-start: 10px;
-                margin-bottom: 10px;
-                padding-top: 20px;
-        }
+  margin-top: 30px;
+  padding-bottom: 20px;
+  background-color: black;
+  color: white;
+  & ul {
+    padding-inline-start: 10px;
+    margin-top: 8px;
+  }
+  & li {
+    list-style-type: none;
+  }
+  & i {
+    width: 14px;
+    margin-right: 15px;
+  }
+  & h4 {
+    font-family: "Shrikhand", sans-serif;
+    font-weight: 500;
+    margin-inline-start: 10px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    margin-top: 0;
+  }
 }
 
+/* Page resto */
 
+/* logo retour index */
 
+.pic-resto {
+  width: 100%;
+  margin: 0;
+}
 
-                /* Page resto */
+h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 500;
+  font-size: 1.7rem;
+  margin-left: 15px;
+}
 
-        /* logo retour index */ 
-        .list {
-                display: flex;
-                flex-direction: column;
-                
-        }
-        .list-menu {
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-end;
-        }
-        .btn3 { background-color: #f2f2f2;
-                margin: 15px;
-                border-radius: 15px;
-                padding: 20px 30px 20px 30px;
-                color: black;
-                border: none;
-                cursor: pointer;
-                text-decoration: none;
-        }
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & i {
+    margin-right: 40px;
+  }
+}
+
+section {
+  background-color: #f2f2f2;
+  border-radius: 50px 50px 0 0;
+  position: relative;
+    top: -46px;
+    margin-bottom: -46px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  & h3 {
+    margin-left: 15px;
+  }
+}
+.list-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  & p {
+    margin: 0;
+  }
+}
+.btn3 {
+  background-color: white;
+  margin: 15px;
+  border-radius: 15px;
+  padding: 20px;
+  color: black;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
