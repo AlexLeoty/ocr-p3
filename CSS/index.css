@@ -33,6 +33,13 @@ header img {
   background-color: #f2f2f2;
   padding: 30px;
 }
+.titres__btn {
+  background-color: #ff79da;
+  border-radius: 30px;
+  padding: 10px 20px 10px 20px;
+  color: white;
+  border: none;
+}
 .titres h1 {
   font-size: 1.2em;
   margin: 0;
@@ -40,14 +47,6 @@ header img {
 .titres h2 {
   font-weight: normal;
   font-size: 0.8em;
-}
-
-.btn {
-  background-color: #ff79da;
-  border-radius: 30px;
-  padding: 10px 20px 10px 20px;
-  color: white;
-  border: none;
 }
 
 /* Fonctionnement */
@@ -67,6 +66,7 @@ header img {
 
 /* Main restos */
 main {
+  padding-bottom: 30px;
   margin-top: 30px;
   background-color: #f2f2f2;
   display: flex;
@@ -111,7 +111,6 @@ p strong {
 
 /* footer */
 footer {
-  margin-top: 30px;
   padding-bottom: 20px;
   background-color: black;
   color: white;
@@ -160,11 +159,14 @@ h1 {
 }
 
 section {
+  display: flex;
+  flex-direction: column;
   background-color: #f2f2f2;
   border-radius: 50px 50px 0 0;
   position: relative;
   top: -46px;
   margin-bottom: -46px;
+  padding-bottom: 30px;
 }
 
 .list {
@@ -193,6 +195,30 @@ section {
   border: none;
   cursor: pointer;
   text-decoration: none;
+}
+
+/* bouton commander */
+.btn__command {
+  background-color: #ff79da;
+  border-radius: 30px;
+  padding: 10px 40px 10px 40px;
+  color: white;
+  border: none;
+  font-size: 1.3em;
+  margin: 20px auto 30px auto;
+  cursor: pointer;
+}
+
+.header-resto__logo {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.fa-arrow-left {
+  font-size: 2em;
+  margin-left: 15px;
 }
 
 /*# sourceMappingURL=index.css.map */
