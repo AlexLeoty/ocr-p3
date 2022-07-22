@@ -34,11 +34,19 @@ header img {
   padding: 30px;
 }
 .titres__btn {
-  background-color: #ff79da;
+  background: linear-gradient(#ff79da, #9356dc);
   border-radius: 30px;
-  padding: 10px 20px 10px 20px;
+  box-shadow: 0px 5px 15px black;
+  padding: 15px 30px;
   color: white;
   border: none;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+.titres__btn:hover {
+  background: linear-gradient(#f88eda, #9d6bda);
+  box-shadow: 0px 5px 20px 0px black;
 }
 .titres h1 {
   font-size: 1.2em;
@@ -50,18 +58,44 @@ header img {
 }
 
 /* Fonctionnement */
-.mes__boutons {
+nav h2 {
+  margin-left: 10px;
+}
+nav .mes__boutons {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
-
-.btn2 {
-  margin: 15px;
-  border-radius: 30px;
-  padding: 20px 30px 20px 30px;
+nav .mes__boutons span {
+  position: absolute;
+  left: 5px;
+  padding: 3px 7px 1px 7px;
+  background-color: #9356dc;
+  border-radius: 12px;
+  color: white;
+}
+nav .btn2 {
+  margin: 10px 15px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 10px -4px black;
+  padding: 20px;
   color: black;
   border: none;
+  background-color: #f2f2f2;
+  font-size: medium;
+  font-weight: 600;
   cursor: pointer;
+}
+nav .btn2:hover {
+  background: #e1d3f4;
+}
+nav .btn2:hover i {
+  color: #9356dc;
+}
+nav .btn2 i {
+  position: absolute;
+  left: 14vmin;
+  font-size: larger;
 }
 
 /* Main restos */
@@ -75,6 +109,10 @@ main {
 main h2 {
   margin-left: 10px;
 }
+main a {
+  text-decoration: none;
+  color: black;
+}
 
 .card {
   background-color: white;
@@ -85,8 +123,17 @@ main h2 {
 
 .card__image {
   height: 15vh;
+  position: relative;
 }
-.card__image > img {
+.card__image p {
+  position: absolute;
+  right: 25px;
+  background-color: #99e2d0;
+  color: #0c5745;
+  padding: 5px;
+  font-weight: bold;
+}
+.card__image img {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -201,14 +248,19 @@ section {
 
 /* bouton commander */
 .btn__command {
-  background-color: #ff79da;
+  background: linear-gradient(#ff79da, #9356dc);
   border-radius: 30px;
   padding: 10px 40px 10px 40px;
+  box-shadow: 0px 5px 15px black;
   color: white;
   border: none;
   font-size: 1.3em;
   margin: 20px auto 30px auto;
   cursor: pointer;
+}
+.btn__command:hover {
+  background: linear-gradient(#f88eda, #9d6bda);
+  box-shadow: 0px 5px 20px 0px black;
 }
 
 .header-resto__logo {
