@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 
 $color-primary: #9356dc;
@@ -8,7 +9,216 @@ body {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   margin: 0px;
+  position: relative;
 }
+
+/* Load spinner */
+
+@keyframes turn1 {
+  0%{
+      transform: rotate(0turn);
+  }
+  20% {
+      border-radius: 0;
+  }
+  30% {
+      transform: rotate(0.57turn);
+      border-radius: 50%;
+  }
+  40%{
+      transform: rotate(0.69turn) scale(1);
+  }
+  50%{
+      transform: rotate(0.8turn) scale(0.3);
+      border-radius: 60%;
+  }
+  60% {
+      transform: rotate(0.93turn) scale(0.3);
+      border-radius: 50%;
+  }
+  70%{
+      transform: rotate(1turn) scale(0.8,0.1);
+      border-radius: 40%;
+  }
+  80%{
+      transform: scale(1.3,0.1);
+      border-radius: 0;
+  }
+  85%{
+      transform:  scale(1.3,0.10) translateY(20vw);
+      border-radius: 5%;
+  }
+  90%{
+      transform:  scale(1.3,0.10) translateY(20vw) translateX(30vw);
+      border-radius: 5%;
+  }
+
+  100% {
+      transform: scale(1,0.1) translateY(20vw) translateX(30vw) ;
+      border-radius: 5%;
+      
+  }
+}
+@keyframes turn2 {
+  0%{
+      transform: rotate(0turn);
+  }
+  20% {
+      border-radius: 0;
+  }
+  30% {
+      border-radius: 50%;
+      transform: rotate(0.57turn);
+  }
+  40%{
+      transform: rotate(0.69turn) scale(1);
+  }
+  50%{
+      transform: rotate(0.8turn) scale(0.3);
+      border-radius: 60%;
+  }
+  60% {
+      transform: rotate(0.93turn) scale(0.3);
+      border-radius: 50%;
+  }
+  70%{
+      transform: rotate(1turn) scale(0.8,0.1);
+      border-radius: 40%;
+  }
+  80%{
+      transform: scale(1.3,0.1);
+      border-radius: 0;
+  }
+  85%{
+      transform:  scale(1.3,0.1);
+      border-radius: 5%;
+  }
+  90%{
+      transform:  scale(1.3,0.1);
+      border-radius: 5%;
+  }
+
+  100% {
+      transform: scale(1,0.1);
+      border-radius: 5%;
+      
+  }
+}
+@keyframes turn3 {
+  0%{
+      transform: rotate(0turn);
+  }
+  20% {
+      border-radius: 0;
+  }
+  30% {
+      border-radius: 50%;
+      transform: rotate(0.57turn);
+  }
+  40%{
+      transform: rotate(0.69turn) scale(1);
+  }
+  50%{
+      transform: rotate(0.8turn) scale(0.3);
+      border-radius: 60%;
+  }
+  60% {
+      transform: rotate(0.93turn) scale(0.3);
+      border-radius: 50%;
+  }
+  70%{
+      transform: rotate(1turn) scale(0.8,0.1);
+      border-radius: 40%;
+  }
+  80%{
+      transform: scale(1.3,0.1);
+      border-radius: 0;
+  }
+  85%{
+      transform:  scale(1.3,0.1) translateY(-20vw);
+      border-radius: 5%;
+  }
+  90%{
+      transform:  scale(1.3,0.1) translateY(-20vw) translateX(-30vw);
+      border-radius: 5%;
+  }
+
+  100% {
+      transform: scale(1,0.1) translateY(-20vw) translateX(-30vw) ;
+      border-radius: 5%;
+      
+  }
+}
+@keyframes visible {
+  0%{
+      visibility: visible;    
+  }
+  99%{
+      visibility: visible;
+  }
+  100% {
+      visibility: hidden;
+    }
+}
+@keyframes body-hidden {
+  0%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 0;
+  }
+  
+}
+
+
+#hidden {
+  animation: body-hidden 3500ms ;
+  position: relative;
+}
+
+.load-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15vh;
+  visibility: hidden;
+  position: fixed;
+  animation: visible 3500ms forwards ;
+  h1 {
+      background: linear-gradient(to right, $color-primary, $color-secundary, $color-tertiary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+  .load-box__anim {
+      display: flex;
+      .load-box__anim__form {
+          height: 20vw;
+          width: 20vw;
+          margin: 5vw;
+          &--1 {
+              background-color: #9356DC;
+              animation: turn1 2700ms 300ms linear  both;
+          }
+          &--2 {
+              background-color: #FF79DA;
+              animation: turn2 2700ms 300ms linear  both;
+          }
+          &--3 {
+              background-color: #99E2D0;
+              animation: turn3 2700ms 300ms linear both;
+          }
+          @for $i from 1 through 3 {
+              &__delay--#{$i} {
+                  animation-delay:  213ms * $i;
+      
+              }
+          }
+      }
+      
+      
+  }
+}
+
 
 /* logo */
 
@@ -49,7 +259,7 @@ body {
     font-weight: bold;
     cursor: pointer;
     &:hover {
-      background: linear-gradient(#f88eda, #9d6bda) ;
+      background: linear-gradient(lighten($color-secundary, 5%) , lighten($color-primary, 5%) ) ;
       box-shadow: 0px 5px 20px 0px black;
     }
   }
@@ -160,6 +370,16 @@ main {
   align-items: center;
   padding: 10px;
   height: 6vh;
+  i {
+    transform-origin: bottom;
+    transition: background-image 2000ms; 
+  }
+  i:hover {
+    color: transparent;
+    background-image: linear-gradient($color-secundary, $color-primary);
+    -webkit-background-clip: text;
+    font-weight: 600;
+  }
 }
 
 p strong {
@@ -194,6 +414,10 @@ footer {
     padding-top: 20px;
     margin-top: 0;
   }
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }
 
 /* Page resto */
@@ -207,17 +431,18 @@ footer {
   object-fit: cover;
 }
 
-h1 {
-  font-family: "Shrikhand", sans-serif;
-  font-weight: 500;
-  font-size: 1.7rem;
-  margin-left: 15px;
-}
+
 
 .header-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  h1 {
+    font-family: "Shrikhand", sans-serif;
+    font-weight: 500;
+    font-size: 1.7rem;
+    margin-left: 15px;
+  }
   i {
     margin-right: 40px;
   }
@@ -237,8 +462,18 @@ section {
 .list {
   display: flex;
   flex-direction: column;
-  & h3 {
+  h3 {
     margin-left: 15px;
+    padding-bottom: 5px;
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;  
+      width: 45px;
+      bottom: 0;  
+      left: 0;  
+      border-bottom: 3px solid $color-tertiary;  
+  }
   }
 }
 .list-menu {
@@ -272,7 +507,7 @@ section {
   margin: 20px auto 30px auto;
   cursor: pointer;
   &:hover {
-    background: linear-gradient(#f88eda, #9d6bda) ;
+    background: linear-gradient(lighten($color-secundary, 5%) , lighten($color-primary, 5%) ) ;
     box-shadow: 0px 5px 20px 0px black;
   }
 }
