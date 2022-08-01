@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+/* key frames loader */
 @keyframes turn1 {
   0% {
     transform: rotate(0turn);
@@ -160,7 +161,7 @@ body {
   position: relative;
 }
 
-/* Load spinner */
+/* Loader */
 .load-box {
   display: flex;
   flex-direction: column;
@@ -207,11 +208,12 @@ body {
   animation-delay: 639ms;
 }
 
+/* Page d'acceuil */
 /* logo */
 header img {
   width: 40%;
   display: block;
-  margin: 20px auto 10px auto;
+  margin: 15px auto 10px auto;
 }
 
 /* Paris Bellevile */
@@ -299,7 +301,7 @@ header img {
   }
 }
 
-/* Fonctionnement */
+/* Rubriques Fonctionnement */
 nav h2 {
   margin-left: 10px;
 }
@@ -498,10 +500,6 @@ main a {
   padding: 10px;
   height: 6vh;
 }
-.card__contenu i {
-  transform-origin: bottom;
-  transition: background-image 2000ms;
-}
 .card__contenu i:hover {
   color: transparent;
   background-image: linear-gradient(#ff79da, #9356dc);
@@ -509,15 +507,18 @@ main a {
   font-weight: 600;
 }
 
+/* titre de restos */
 p strong {
   font-size: large;
 }
 
+/*  coeur */
 .fa-regular {
   font-size: x-large;
+  animation: apparition 750ms ease-in;
 }
 
-/* footer */
+/* footer  */
 footer {
   padding-bottom: 20px;
   background-color: black;
@@ -599,8 +600,32 @@ footer a {
   color: white;
 }
 
-/* Page resto */
-/* logo retour index */
+/****** Page resto ******/
+/* header logo + fleche return */
+.header-resto__logo {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.header-resto__logo img {
+  position: relative;
+}
+.header-resto__logo a {
+  position: absolute;
+}
+@media screen and (min-width: 992px) {
+  .header-resto__logo a {
+    font-size: 2em;
+  }
+}
+
+.fa-arrow-left {
+  font-size: 2em;
+  margin-left: 15px;
+  color: black;
+}
+
 .pic-resto {
   width: 100%;
   margin: 0;
@@ -608,6 +633,19 @@ footer a {
   object-fit: cover;
 }
 
+/* section :entrées plats & desserts */
+section {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  border-radius: 50px 50px 0 0;
+  position: relative;
+  top: -46px;
+  margin-bottom: -46px;
+  padding-bottom: 30px;
+}
+
+/* titre et coeur restos */
 .header-section {
   display: flex;
   justify-content: space-between;
@@ -626,7 +664,7 @@ footer a {
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .header-section h1 {
-    font-size: 2.7em;
+    font-size: 1.7em;
   }
 }
 .header-section i {
@@ -634,21 +672,11 @@ footer a {
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .header-section i {
-    font-size: 2.7em;
+    font-size: 1.7em;
   }
 }
 
-section {
-  display: flex;
-  flex-direction: column;
-  background-color: #f2f2f2;
-  border-radius: 50px 50px 0 0;
-  position: relative;
-  top: -46px;
-  margin-bottom: -46px;
-  padding-bottom: 30px;
-}
-
+/* resto la note enchantée "4" entrées */
 @media screen and (min-width: 992px) {
   #listquatre {
     flex-direction: row;
@@ -663,15 +691,12 @@ section {
   }
 }
 
+/* mise en page d'une dic "entrés" plats ou dessert */
 .list {
   display: flex;
   flex-direction: column;
   animation: apparition 1400ms linear;
-}
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .list {
-    font-size: 1.7em;
-  }
+  animation: bouton 1400ms linear;
 }
 @media screen and (min-width: 992px) {
   .list {
@@ -696,21 +721,73 @@ section {
 
 .list-menu {
   display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 1rem;
   justify-content: space-between;
-  flex-direction: column;
+}
+@media screen and (min-width: 992px) {
+  .list-menu {
+    width: 27vw;
+  }
 }
 .list-menu h2 {
-  margin: 0;
+  margin: 10px;
   font-size: 1.2em;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
-.list-menu p {
-  margin: 0;
+.list-menu p:first-of-type {
+  margin: 0 10px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+.list-menu p:last-of-type {
+  margin: 0 15px 0 0;
+}
+@media screen and (min-width: 992px) {
+  .list-menu--quatre {
+    width: 20vw;
+  }
+}
+.list-menu .texte {
+  display: flex;
+  flex-direction: column;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+.list-menu .texte:active + .btn4 {
+  animation: vert 200ms linear forwards;
+}
+.list-menu .texte:active + .btn4 i {
+  animation: check 200ms linear forwards;
+}
+.list-menu .texte .prix {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: auto;
+}
+.list-menu .texte .prix p:first-child {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.list-menu .btn4 {
+  background-color: #99e2d0;
+  border-radius: 0 15px 15px 0;
+  transform: scale(0);
+}
+.list-menu .btn4 i {
+  font-size: xx-large;
+  line-height: 80px;
+  color: white;
 }
 
 .monprix {
@@ -724,6 +801,9 @@ section {
   0% {
     opacity: 0;
   }
+  50% {
+    opacity: 0.2;
+  }
   100% {
     opacity: 1;
   }
@@ -736,25 +816,27 @@ section {
     transform: translateY(0);
   }
 }
-.btn3 {
-  background-color: white;
-  margin: 15px;
-  border-radius: 15px;
-  padding: 20px;
-  color: black;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  animation: bouton 2000ms ease;
-}
-@media screen and (min-width: 992px) {
-  .btn3 {
-    width: 25vw;
-    height: 5vh;
+/* anim check menu fond vert */
+@keyframes vert {
+  0% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  100% {
+    padding: 0 50px;
+    transform: scaleX(1);
+    transform-origin: right;
   }
 }
-
-/* bouton commander */
+@keyframes check {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+/* bouton commander fin de page */
 .btn__command {
   background: linear-gradient(#ff79da, #9356dc);
   border-radius: 30px;
@@ -769,18 +851,6 @@ section {
 .btn__command:hover {
   background: linear-gradient(#ff93e1, #a16be0);
   box-shadow: 0px 5px 20px 0px black;
-}
-
-.header-resto__logo {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-
-.fa-arrow-left {
-  font-size: 2em;
-  margin-left: 15px;
 }
 
 /*# sourceMappingURL=index.css.map */

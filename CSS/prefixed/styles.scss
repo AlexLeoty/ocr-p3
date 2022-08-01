@@ -6,19 +6,18 @@ $color-tertiary: #99e2d0;
 
 body {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   margin: 0px;
 }
 
-
 /* logo */
 
-  header img {
-    width: 40%;
-    display: block;
-    margin: 20px auto 10px auto;
-  }
+header img {
+  width: 40%;
+  display: block;
+  margin: 20px auto 10px auto;
+}
 
 /* Paris Bellevile */
 .loc {
@@ -26,11 +25,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background-color: #e1dfdf;
   font-weight: 500;
   p {
@@ -45,21 +44,27 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
   background-color: #f2f2f2;
   padding: 30px;
   &__btn {
-    background: -webkit-gradient(linear, left top, left bottom, from($color-secundary), to($color-primary)) ;
-    background: -o-linear-gradient($color-secundary, $color-primary) ;
-    background: linear-gradient($color-secundary, $color-primary) ;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from($color-secundary),
+      to($color-primary)
+    );
+    background: -o-linear-gradient($color-secundary, $color-primary);
+    background: linear-gradient($color-secundary, $color-primary);
     border-radius: 30px;
     -webkit-box-shadow: 0px 5px 15px black;
-            box-shadow: 0px 5px 15px black;
+    box-shadow: 0px 5px 15px black;
     padding: 15px 30px;
     color: white;
     border: none;
@@ -67,11 +72,17 @@ body {
     font-weight: bold;
     cursor: pointer;
     &:hover {
-      background: -webkit-gradient(linear, left top, left bottom, from(#f88eda), to(#9d6bda)) ;
-      background: -o-linear-gradient(#f88eda, #9d6bda) ;
-      background: linear-gradient(#f88eda, #9d6bda) ;
+      background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(#f88eda),
+        to(#9d6bda)
+      );
+      background: -o-linear-gradient(#f88eda, #9d6bda);
+      background: linear-gradient(#f88eda, #9d6bda);
       -webkit-box-shadow: 0px 5px 20px 0px black;
-              box-shadow: 0px 5px 20px 0px black;
+      box-shadow: 0px 5px 20px 0px black;
     }
   }
   h1 {
@@ -84,14 +95,11 @@ body {
   }
 }
 
-
-
 /* Fonctionnement */
 
 nav {
-  
   h2 {
-    margin-left: 10px;;
+    margin-left: 10px;
   }
   .mes__boutons {
     display: -webkit-box;
@@ -99,8 +107,8 @@ nav {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     position: relative;
     span {
       position: absolute;
@@ -109,36 +117,33 @@ nav {
       background-color: #9356dc;
       border-radius: 12px;
       color: white;
-}
     }
-    .btn2 {
-      margin: 10px 15px;
-      border-radius: 15px;
-      -webkit-box-shadow: 0px 6px 10px -4px black;
-              box-shadow: 0px 6px 10px -4px black;
-      padding: 20px ;
-      color: black;
-      border: none;
-      background-color: #f2f2f2;
-      font-size: medium;
-      font-weight: 600;  
-      cursor: pointer;
-      &:hover {
-        background: #e1d3f4;
-        i {
-          color: $color-primary;
-        }
-      }
-      i {
-        position: absolute;
-        left: 14vmin;
-        font-size: larger;
-        
-      }
-     }
   }
-
-
+  .btn2 {
+    margin: 10px 15px;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 6px 10px -4px black;
+    box-shadow: 0px 6px 10px -4px black;
+    padding: 20px;
+    color: black;
+    border: none;
+    background-color: #f2f2f2;
+    font-size: medium;
+    font-weight: 600;
+    cursor: pointer;
+    &:hover {
+      background: #e1d3f4;
+      i {
+        color: $color-primary;
+      }
+    }
+    i {
+      position: absolute;
+      left: 14vmin;
+      font-size: larger;
+    }
+  }
+}
 
 /* Main restos */
 main {
@@ -150,8 +155,8 @@ main {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   h2 {
     margin-left: 10px;
   }
@@ -165,7 +170,7 @@ main {
   background-color: white;
   border-radius: 10px;
   -webkit-box-shadow: 0px 5px 10px black;
-          box-shadow: 0px 5px 10px black;
+  box-shadow: 0px 5px 10px black;
   margin: 10px;
 }
 .card__image {
@@ -183,7 +188,7 @@ main {
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     border-radius: 10px 10px 0 0;
   }
 }
@@ -193,16 +198,22 @@ main {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 10px;
   height: 6vh;
   i:hover {
     color: transparent;
-    background-image: -webkit-gradient(linear, left top, left bottom, from($color-secundary), to($color-primary));
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from($color-secundary),
+      to($color-primary)
+    );
     background-image: -o-linear-gradient($color-secundary, $color-primary);
     background-image: linear-gradient($color-secundary, $color-primary);
     font-weight: 600;
@@ -224,7 +235,7 @@ footer {
   color: white;
   ul {
     -webkit-padding-start: 10px;
-            padding-inline-start: 10px;
+    padding-inline-start: 10px;
     margin-top: 8px;
   }
   li {
@@ -238,7 +249,7 @@ footer {
     font-family: "Shrikhand", sans-serif;
     font-weight: 500;
     -webkit-margin-start: 10px;
-            margin-inline-start: 10px;
+    margin-inline-start: 10px;
     margin-bottom: 10px;
     padding-top: 20px;
     margin-top: 0;
@@ -258,7 +269,7 @@ footer {
   margin: 0;
   height: 307px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 h1 {
@@ -273,11 +284,11 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   i {
     margin-right: 40px;
   }
@@ -289,12 +300,12 @@ section {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   background-color: #f2f2f2;
   border-radius: 50px 50px 0 0;
   position: relative;
-    top: -46px;
+  top: -46px;
   margin-bottom: -46px;
   padding-bottom: 30px;
 }
@@ -305,8 +316,8 @@ section {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   & h3 {
     margin-left: 15px;
   }
@@ -316,11 +327,11 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   & p {
     margin: 0;
   }
@@ -338,42 +349,46 @@ section {
 
 /* bouton commander */
 .btn__command {
-  background: -webkit-gradient(linear, left top, left bottom, from($color-secundary), to($color-primary));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from($color-secundary),
+    to($color-primary)
+  );
   background: -o-linear-gradient($color-secundary, $color-primary);
   background: linear-gradient($color-secundary, $color-primary);
   border-radius: 30px;
   padding: 10px 40px 10px 40px;
   -webkit-box-shadow: 0px 5px 15px black;
-          box-shadow: 0px 5px 15px black;
+  box-shadow: 0px 5px 15px black;
   color: white;
   border: none;
   font-size: 1.3em;
   margin: 20px auto 30px auto;
   cursor: pointer;
   &:hover {
-    background: -webkit-gradient(linear, bottom, from(#f88eda), to(#9d6bda)) ;
-    background: -o-linear-gradient(#f88eda, #9d6bda) ;
-    background: linear-gradient(#f88eda, #9d6bda) ;
+    background: -webkit-gradient(linear, bottom, from(#f88eda), to(#9d6bda));
+    background: -o-linear-gradient(#f88eda, #9d6bda);
+    background: linear-gradient(#f88eda, #9d6bda);
     -webkit-box-shadow: 0px 5px 20px 0px black;
-            box-shadow: 0px 5px 20px 0px black;
+    box-shadow: 0px 5px 20px 0px black;
   }
 }
-
-
 
 .header-resto__logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .fa-arrow-left {
