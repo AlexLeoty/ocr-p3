@@ -514,8 +514,12 @@ p strong {
 
 .fa-regular {
   font-size: x-large;
-  animation: apparition 750ms ease-in;
+  &:hover{
+    animation: apparition 1200ms ease-in-out;
+  }
+  
 }
+
 
 /* footer  */
 
@@ -787,11 +791,9 @@ section {
 
 @keyframes apparition {
   0% {
-      opacity: 0;
+      opacity: 0.3;
   }
-  50%{
-    opacity: 0.2;
-  }
+
   100% {
       opacity: 1;
   }
