@@ -216,7 +216,7 @@ header img {
   margin: 15px auto 10px auto;
 }
 
-/* Paris Bellevile */
+/* Paris Belleville */
 .loc {
   display: flex;
   align-items: baseline;
@@ -270,7 +270,7 @@ header img {
 }
 .titres__btn:hover {
   background: linear-gradient(#ff93e1, #a16be0);
-  box-shadow: 0px 5px 20px 0px black;
+  box-shadow: 0px 5px 20px black;
 }
 .titres h1 {
   font-size: 1.2em;
@@ -499,6 +499,7 @@ main a {
   align-items: center;
   padding: 10px;
   height: 6vh;
+  /* titre de restos */
 }
 .card__contenu i:hover {
   color: transparent;
@@ -506,18 +507,16 @@ main a {
   -webkit-background-clip: text;
   font-weight: 600;
 }
-
-/* titre de restos */
-p strong {
+.card__contenu i:hover:hover {
+  animation: apparition 1200ms ease-in-out;
+}
+.card__contenu p strong {
   font-size: large;
 }
 
 /*  coeur */
 .fa-regular {
   font-size: x-large;
-}
-.fa-regular:hover {
-  animation: apparition 1200ms ease-in-out;
 }
 
 /* footer  */
