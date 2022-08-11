@@ -4,7 +4,7 @@
   "description": "Projet OCR ohmyfood",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./SCSS/styles.scss:./CSS/index.css",
+    "sass": "sass --watch ./SCSS/styles.scss:./CSS/styles.css",
     "prefix": "postcss ./SCSS/styles.scss --use autoprefixer -d ./CSS/prefixed/"
   },
   "author": "Alexandre Léoty",
