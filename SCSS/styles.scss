@@ -3,8 +3,8 @@
 $color-primary: #9356dc;
 $color-secundary: #ff79da;
 $color-tertiary: #99e2d0;
-$anim-duration: 4000ms;
-$numb-menu:3;
+$anim-duration: 3000ms;
+
 
 
 @mixin desktop {
@@ -818,7 +818,7 @@ section {
 
   }
   100%{
-    padding: 0 50px;
+    padding: 0 25px;
     transform: scaleX(1) ;
     transform-origin: right;
   }

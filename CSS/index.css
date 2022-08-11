@@ -157,7 +157,7 @@ body {
 
 /* page principale à masquer pendant load */
 #hidden {
-  animation: body-hidden 4000ms;
+  animation: body-hidden 3000ms;
   position: relative;
 }
 
@@ -170,7 +170,7 @@ body {
   visibility: hidden;
   position: fixed;
   left: 5vw;
-  animation: visible 4000ms forwards;
+  animation: visible 3000ms forwards;
 }
 .load-box h1 {
   background: linear-gradient(to right, #9356dc, #ff79da, #99e2d0);
@@ -821,7 +821,7 @@ section {
     transform-origin: right;
   }
   100% {
-    padding: 0 50px;
+    padding: 0 25px;
     transform: scaleX(1);
     transform-origin: right;
   }
