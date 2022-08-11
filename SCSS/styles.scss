@@ -59,6 +59,11 @@ $anim-duration: 3000ms;
       border-radius: 5%;
   }
 
+  95% {
+      transform: scale(1,0.1) translateY(-20vw) translateX(30vw) ;
+      border-radius: 5%;
+      
+  }
   100% {
       transform: scale(1,0.1) translateY(-20vw) translateX(30vw) ;
       border-radius: 5%;
@@ -104,6 +109,11 @@ $anim-duration: 3000ms;
       border-radius: 5%;
   }
 
+  95% {
+      transform: scale(1,0.1);
+      border-radius: 5%;
+      
+  }
   100% {
       transform: scale(1,0.1);
       border-radius: 5%;
@@ -149,6 +159,11 @@ $anim-duration: 3000ms;
       border-radius: 5%;
   }
 
+  95% {
+      transform: scale(1,0.1) translateY(20vw) translateX(-30vw) ;
+      border-radius: 5%;
+      
+  }
   100% {
       transform: scale(1,0.1) translateY(20vw) translateX(-30vw) ;
       border-radius: 5%;
@@ -216,15 +231,15 @@ body {
           margin: 5vw;
           &--1 {
               background-color: #9356DC;
-              animation: turn1 2700ms linear both;
+              animation: turn1 2787ms linear both;
           }
           &--2 {
               background-color: #FF79DA;
-              animation: turn2 2700ms linear both;
+              animation: turn2 2574ms linear both;
           }
           &--3 {
               background-color: #99E2D0;
-              animation: turn3 2700ms linear both;
+              animation: turn3 2361ms linear both;
           }
           @for $i from 1 through 3 {
               &__delay--#{$i} {
